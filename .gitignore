@@ -25,3 +25,6 @@ dist-ssr
 
 # Bun files
 bun.lockb
+
+# pnpm files
+pnpm-lock.yaml
