@@ -10,11 +10,11 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/projects' element={<h1>PROYECTOS</h1>} />
-        <Route path='/about' element={<h1>ACERCA DE MI</h1>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<h1>PROYECTOS</h1>} />
+        <Route path="/about" element={<h1>ACERCA DE MI</h1>} />
 
-        <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+        <Route path="*" element={<h1>404 NOT FOUND</h1>} />
       </Routes>
     </BrowserRouter>
   )
