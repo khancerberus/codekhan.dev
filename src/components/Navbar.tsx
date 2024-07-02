@@ -5,9 +5,9 @@ import logo from '../assets/logoK.avif'
 export const Navbar = () => {
   return (
     <nav>
-      <div className='navbar'>
+      <div className="navbar">
         <div className="navbar-brand">
-          <Link to="/" >
+          <Link to="/">
             <img src={logo} alt="logo" width={100} />
             <h1>CODEKHAN.DEV</h1>
           </Link>
