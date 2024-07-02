@@ -1,7 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('./assets/fonts/Rajdhani-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    font-size: 22px;
+  --link-hover-color: #ff9900;
+  --link-hover-color-2: #ff6b6b;
+
+  font-family: 'Rajdhani', 'Courier New', Courier, monospace;
+  /* font-size: 22px; */
+  background: linear-gradient(0deg, #0B3140 0%, #0B3140 20%, #081826 60%);
+  color: var(--link-hover-color);
+  height: 100vh;
+}
+
+
+a {
+    color: var(--link-hover-color)
+}
+
+a:hover {
+    color: var(--link-hover-color-2)
 }
