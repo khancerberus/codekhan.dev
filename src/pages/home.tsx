@@ -1,7 +1,11 @@
+import logo from '../assets/logoK.png'
+
 export const Home = () => {
   return (
-    <div className="flex w-screen flex-col items-center">
-      <h1 className="text-6xl">Welcome to the page</h1>
-    </div>
+    <>
+      <section className="sm:-z-10 flex sm:h-screen w-screen sm:items-center sm:justify-center sm:fixed">
+        <img src={logo} alt="Logo" className="logo-home max-h-[30rem]" />
+      </section>
+    </>
   )
 }

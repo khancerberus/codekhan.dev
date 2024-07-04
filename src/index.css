@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
 @font-face {
-    font-family: 'Rajdhani';
-    src: url('./assets/fonts/Rajdhani-Medium.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Rajdhani';
+  src: url('./assets/fonts/Rajdhani-Medium.ttf');
+  font-weight: bolder;
+  font-style: normal;
 }
 
 @tailwind base;
@@ -11,21 +11,62 @@
 @tailwind utilities;
 
 :root {
+  --first-color: #f2e205;
   --link-hover-color: #ff9900;
   --link-hover-color-2: #ff6b6b;
 
   font-family: 'Rajdhani', 'Courier New', Courier, monospace;
-  /* font-size: 22px; */
-  background: linear-gradient(0deg, #0B3140 0%, #0B3140 20%, #081826 60%);
-  color: var(--link-hover-color);
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(to bottom,  #000000 0%, #274F4E 80%,  #55D95D 100%);
+  color: var(--first-color);
   height: 100vh;
 }
 
-
-a {
-    color: var(--link-hover-color)
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-a:hover {
-    color: var(--link-hover-color-2)
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fader {
+  transition: all 0.5s ease;
+  color:#eee99c;
+  text-shadow: 0 0 15px #f2e205;
+
+  &::before {
+    animation: fadeOut 0.5s forwards;
+  }
+}
+
+.fader:hover {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 5px;
+    height: 100%;
+    background-color: #f28705;
+    transition: all 0.2s ease;
+    animation: fadeIn 0.5s forwards;
+  }
+}
+
+.logo-home {
+  filter: drop-shadow(0 0 0.5rem #f2e205) blur(0.05rem);
 }

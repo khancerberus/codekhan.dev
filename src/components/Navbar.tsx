@@ -1,28 +1,27 @@
 import { Link } from 'react-router-dom'
-import './Navbar.css'
-import logo from '../assets/logoK.avif'
+// import logo from '../assets/logoK.avif'
 
 export const Navbar = () => {
   return (
-    <nav>
-      <div className="navbar">
-        <div className="navbar-brand">
-          <Link to="/">
-            <img src={logo} alt="logo" width={100} />
-            <h1>CODEKHAN.DEV</h1>
-          </Link>
-        </div>
-        <div className="navbar-menus">
-          <ul>
-            <li>
-              <Link to="/projects">PROYECTOS</Link>
-            </li>
-            <li>
-              <Link to="/about">ACERCA DE MI</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <nav className="flex flex-col gap-2 sm:fixed sm:left-10">
+      <Link
+        to="/"
+        className="fader bg-[#0004] px-2 text-4xl hover:text-white sm:text-6xl xl:bg-transparent"
+      >
+        INICIO
+      </Link>
+      <Link
+        to="#"
+        className="fader bg-[#0004] px-2 text-4xl hover:text-white sm:text-6xl xl:bg-transparent"
+      >
+        PROYECTOS
+      </Link>
+      <Link
+        to="#"
+        className="fader bg-[#0004] px-2 text-4xl hover:text-white sm:text-6xl xl:bg-transparent"
+      >
+        CONTACTO
+      </Link>
     </nav>
   )
 }
