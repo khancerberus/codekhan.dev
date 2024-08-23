@@ -1,0 +1,50 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Card from '@/components/Card.astro'
+---
+
+<Layout title="codekhan.dev">
+	<main class="flex flex-col justify-center items-center p-5">
+		<div class="h-10 bg-red-500 absolute top-0 left-0 right-0 flex justify-center items-center"> 
+			<p class="text-white font-bold">Página en construcción. Vuelva pronto!</p>
+		</div>
+		<header class="flex flex-col my-24">
+			<h1 class="text-6xl">Hola! Esto es</h1>
+			<h1 class="text-6xl text-[var(--primary-color)]">
+				{'<'}codekhan.dev{' />'}
+			</h1>
+		</header>
+
+		<section class="md:max-w-[35rem]">
+			<p class="text-2xl">
+				<code>codekhan.dev</code> es un proyecto personal que busca mostrar algunos de mis proyectos más relevantes.
+			</p>
+		</section>
+
+		<section class="flex flex-col gap-10 md:w-full">
+			<h2 class="text-5xl">Proyectos</h2>
+
+			<div class="flex gap-3 flex-wrap">
+				<Card
+					title="Creator Awards"
+					imageUrl="/creators-award-web.png"
+					technologies={['React', 'TailwindCSS', 'Node.js', 'PostgreSQL', 'Express']}
+				>
+					Proyecto de aplicación web para el evento de  comunidad de los creators.
+				</Card>
+				<Card
+					title="Creator Awards"
+					imageUrl="/creators-award-web.png"
+				>
+					Proyecto de aplicación web para el evento de  comunidad de los creators. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.
+				</Card>
+				<Card
+					title="Creator Awards"
+					imageUrl="/creators-award-web.png"
+				>
+					Proyecto de aplicación web para el evento de  comunidad de los creators. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.
+				</Card>
+			</div>
+		</section>
+	</main>
+</Layout>

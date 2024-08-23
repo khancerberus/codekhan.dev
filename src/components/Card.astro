@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets"
+import Tag from "./Tag.astro"
+
+interface CardProps {
+    title: string;
+    imageUrl: string;
+    technologies: string[];
+}
+
+const { title, imageUrl, technologies } = Astro.props as CardProps;
+---
+
+<article class="flex flex-col gap-5 min-w-[25rem] max-w-[25rem] p-3 bg-[var(--accent)] rounded-md border-[var(--tertiary-color)] border">
+    <Image
+        src={imageUrl}
+        alt={title}
+        width={375}
+        height={279}
+        loading="eager"
+        style={{ objectFit: 'cover' }}
+        class="rounded-md shadow-md"
+    />
+
+    <div class="flex flex-col gap-3">
+        <h4 class="text-3xl text-[var(--primary-color)]">{title}</h4>
+        <p>
+            <slot />
+        </p>
+    </div>
+
+    <footer class="flex flex-wrap gap-3">
+        {technologies?.map((tech) => (
+            <Tag label={tech} />
+        ))}
+    </footer>
+</article>
